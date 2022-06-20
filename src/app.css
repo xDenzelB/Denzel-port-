@@ -9,15 +9,35 @@ body {
 }
 
 .mainContainer {
-  border: solid white 10px;
-  background-color: black;
+  border: solid white 1px;
+  border-radius: 5px;
+  background-color: rgb(5, 4, 4);
+  height: 95px;
+  text-align: center;
+  color: rgb(37, 250, 0);
+  font-size: 2.5rem;
+  opacity: 0.8;
 }
 
-.myName {
-  color: white;
-  text-align: center;
-}
 
 .particle {
   z-index: -1;
+}
+
+.about {
+  color: white;
+  border: solid 4px wheat;
+  width: 700px;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  height: 650px;
+  margin: 100px;
+  flex-direction: column;
+}
+
+.portrait {
+  width: 350px;
+  margin: 75px;
+  border-radius: 400px;
 }
