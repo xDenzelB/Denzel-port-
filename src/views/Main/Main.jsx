@@ -10,10 +10,10 @@ export default function Main() {
       <div className={styles.mainContainer}>
         <Typewriter className={styles.myName}
           onInit={(typewriter) => {
-            typewriter.typeString('Welcome to Denzel Bartolaba\'s Portfolio!').start();
-           }}/>
+            typewriter.typeString('Hello World!').start();
+          }}/>
       </div>
-      <div>
+      <div className={styles.center}>
         <About />
       </div>
     </>

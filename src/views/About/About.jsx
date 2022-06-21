@@ -5,7 +5,11 @@ export default function About() {
   return (
     <div className={styles.about}>
       <img className={styles.portrait} src={myPicture} />
-      <h3>Denzel Bartolaba</h3>
+      <h2>Denzel Bartolaba (He/Him)</h2>
+      <p>FullStack JavaScript Software Engineer</p>
+      <button className={styles.btn}>My Portfolio</button>
+      <button className={styles.btn}>My Experience</button>
+      <button className={styles.btn}>Lets Connect!</button>
     </div>
   )
 }

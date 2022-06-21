@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 
 }
 
@@ -9,12 +9,12 @@ body {
 }
 
 .mainContainer {
-  border: solid white 1px;
+  border: solid rgb(61, 61, 61) 1px;
   border-radius: 5px;
   background-color: rgb(5, 4, 4);
   height: 95px;
   text-align: center;
-  color: rgb(37, 250, 0);
+  color: rgb(255, 255, 255);
   font-size: 2.5rem;
   opacity: 0.8;
 }
@@ -26,14 +26,45 @@ body {
 
 .about {
   color: white;
-  border: solid 4px wheat;
+  border: solid 4px rgb(45, 45, 43);
   width: 700px;
   align-items: center;
   text-align: center;
   background-color: black;
   height: 650px;
-  margin: 100px;
+  margin: 75px;
   flex-direction: column;
+  border-radius: 20px;
+  padding: 11px;
+}
+
+.about, h2, p {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgb(179, 179, 179);
+  cursor: pointer;
+  border: solid 2px rgb(50, 50, 50);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.btn:hover {
+  background-color: white;
+  width: 230px;
 }
 
 .portrait {

@@ -25,12 +25,12 @@ export default function ParticlesBackground() {
           autoPlay: true,
           background: {
             color: {
-              value: "#000"
+              value: "#000000"
             },
             image: "",
-            position: "",
-            repeat: "",
-            size: "",
+            position: "50% 50%",
+            repeat: "no-repeat",
+            size: "cover",
             opacity: 1
           },
           backgroundMask: {
@@ -217,13 +217,13 @@ export default function ParticlesBackground() {
               }
             },
             color: {
-              value: "#ffffff",
+              value: "#fff",
               animation: {
                 h: {
                   count: 0,
                   enable: false,
                   offset: 0,
-                  speed: 1,
+                  speed: 20,
                   decay: 0,
                   sync: true
                 },
@@ -270,17 +270,50 @@ export default function ParticlesBackground() {
               }
             },
             gradient: [],
-            groups: {},
+            groups: {
+              z5000: {
+                number: {
+                  value: 70
+                },
+                zIndex: {
+                  value: 50
+                }
+              },
+              z7500: {
+                number: {
+                  value: 30
+                },
+                zIndex: {
+                  value: 75
+                }
+              },
+              z2500: {
+                number: {
+                  value: 50
+                },
+                zIndex: {
+                  value: 25
+                }
+              },
+              z1000: {
+                number: {
+                  value: 40
+                },
+                zIndex: {
+                  value: 10
+                }
+              }
+            },
             links: {
               blink: false,
               color: {
-                value: "#fff"
+                value: "#ffffff"
               },
               consent: false,
               distance: 100,
               enable: false,
               frequency: 1,
-              opacity: 1,
+              opacity: 0.4,
               shadow: {
                 blur: 5,
                 color: {
@@ -298,14 +331,14 @@ export default function ParticlesBackground() {
             move: {
               angle: {
                 offset: 0,
-                value: 90
+                value: 10
               },
               attract: {
                 distance: 200,
                 enable: false,
                 rotate: {
-                  x: 3000,
-                  y: 3000
+                  x: 600,
+                  y: 1200
                 }
               },
               center: {
@@ -315,7 +348,7 @@ export default function ParticlesBackground() {
               },
               decay: 0,
               distance: {},
-              direction: "none",
+              direction: "right",
               drift: 0,
               enable: true,
               gravity: {
@@ -334,21 +367,17 @@ export default function ParticlesBackground() {
                   value: 0
                 },
                 enable: false,
-                options: {
-                  sides: 6,
-                  turnSteps: 30,
-                  angle: 30
-                }
+                options: {}
               },
               outModes: {
-                default: "destroy",
-                bottom: "destroy",
-                left: "destroy",
-                right: "destroy",
-                top: "destroy"
+                default: "out",
+                bottom: "out",
+                left: "out",
+                right: "out",
+                top: "out"
               },
               random: false,
-              size: true,
+              size: false,
               speed: 5,
               spin: {
                 acceleration: 0,
@@ -356,8 +385,8 @@ export default function ParticlesBackground() {
               },
               straight: false,
               trail: {
-                enable: true,
-                length: 3,
+                enable: false,
+                length: 10,
                 fillColor: {
                   value: "#000000"
                 }
@@ -372,25 +401,23 @@ export default function ParticlesBackground() {
                 factor: 1000
               },
               limit: 0,
-              value: 0
+              value: 200
             },
             opacity: {
               random: {
                 enable: false,
                 minimumValue: 0.1
               },
-              value: {
-                min: 0.3,
-                max: 0.8
-              },
+              value: 1,
               animation: {
                 count: 0,
                 enable: false,
-                speed: 2,
+                speed: 3,
                 decay: 0,
                 sync: false,
                 destroy: "none",
-                startValue: "random"
+                startValue: "random",
+                minimumValue: 0.1
               }
             },
             reduceDuplicates: false,
@@ -441,10 +468,7 @@ export default function ParticlesBackground() {
                 enable: false,
                 minimumValue: 1
               },
-              value: {
-                min: 1,
-                max: 10
-              },
+              value: 3,
               animation: {
                 count: 0,
                 enable: false,
@@ -463,8 +487,8 @@ export default function ParticlesBackground() {
                 enable: false,
                 minimumValue: 0
               },
-              value: 0,
-              opacityRate: 1,
+              value: 5,
+              opacityRate: 0.5,
               sizeRate: 1,
               velocityRate: 1
             }
@@ -482,8 +506,8 @@ export default function ParticlesBackground() {
               wait: false
             },
             rate: {
-              quantity: 10,
-              delay: 0.25
+              quantity: 1,
+              delay: 7
             },
             shape: "square",
             startCount: 0,
@@ -492,42 +516,46 @@ export default function ParticlesBackground() {
               height: 0,
               width: 0
             },
-            direction: "none",
-            position: {
-              x: 50,
-              y: 50
-            },
-            spawnColor: {
-              value: "#ff0000",
-              animation: {
-                h: {
-                  count: 0,
-                  enable: true,
-                  offset: 0,
-                  speed: 5,
-                  decay: 0,
-                  sync: true
+            particles: {
+              shape: {
+                type: "images",
+                options: {
+                  images: {
+                    src: "https://particles.js.org/images/cyan_amongus.png",
+                    width: 500,
+                    height: 634
+                  }
+                }
+              },
+              size: {
+                value: 40
+              },
+              move: {
+                speed: 10,
+                outModes: {
+                  default: "none",
+                  right: "destroy"
                 },
-                s: {
-                  count: 0,
-                  enable: false,
-                  offset: 0,
-                  speed: 1,
-                  decay: 0,
-                  sync: true
+                straight: true
+              },
+              zIndex: {
+                value: 0
+              },
+              rotate: {
+                value: {
+                  min: 0,
+                  max: 360
                 },
-                l: {
-                  count: 0,
+                animation: {
                   enable: true,
-                  offset: {
-                    min: 20,
-                    max: 80
-                  },
-                  speed: 0,
-                  decay: 0,
+                  speed: 4,
                   sync: true
                 }
               }
+            },
+            position: {
+              x: -5,
+              y: 55
             }
           }
         }
